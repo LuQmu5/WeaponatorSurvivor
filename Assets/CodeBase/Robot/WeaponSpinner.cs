@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class WeaponSpinner : MonoBehaviour
 {
-    [SerializeField] private float _rotationSpeed = 1;
+    private const float FullRadius = 360;
+
+    [SerializeField] private float _turnsPerSecond = 1;
 
     private void Start()
     {
@@ -15,7 +17,7 @@ public class WeaponSpinner : MonoBehaviour
     {
         while (true)
         {
-            transform.Rotate(Vector3.up * Time.deltaTime * _rotationSpeed);
+            transform.Rotate(Vector3.up * Time.deltaTime * _turnsPerSecond * FullRadius);
 
             yield return null;
         }
