@@ -23,7 +23,7 @@ public class RobotMover : MonoBehaviour
             movementVector.y = 0;
             movementVector.Normalize();
 
-            // transform.forward = movementVector;
+            // transform.forward = movementVector; // поворот в сторону движения
         }
 
         _controller.Move(_movementSpeed * movementVector * Time.deltaTime);
