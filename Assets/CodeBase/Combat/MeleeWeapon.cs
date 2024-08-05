@@ -13,5 +13,6 @@ public class MeleeWeapon : MonoBehaviour, IMeleeWeapon
     public void DealDamage(IHealth target)
     {
         target.ApplyDamage(1);
+        print(target.CurrentHealth);
     }
 }

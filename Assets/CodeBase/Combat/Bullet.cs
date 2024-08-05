@@ -17,6 +17,8 @@ public class Bullet : MonoBehaviour
         if (other.TryGetComponent(out IHealth hittedTarget))
         {
             hittedTarget.ApplyDamage(1);
+            print(hittedTarget.CurrentHealth);
+
             gameObject.SetActive(false);
         }
     }

@@ -16,7 +16,8 @@ public class RangeWeapon : MonoBehaviour, IRangeWeapon
     {
         _bulletsFactory = bulletsFactory;
 
-        StartCoroutine(Attacking());
+        if (gameObject.activeSelf)
+            StartCoroutine(Attacking());
     }
 
     private IEnumerator Attacking()
